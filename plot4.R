@@ -10,7 +10,7 @@ coal.years <- ddply(coal,'year',function(df){sum(df$Emissions)})
 
 png(filename='plot4.png')
 par(mfrow=c(1,1))
-plot(coal.years,pch=20,col='red',cex=2,main='Emissions from coal combustion-related sources from 1999 to 2008',
+plot(coal.years,pch=20,col='red',cex=2,main='Emissions from coal combustion-related sources 1999-2008',
      xlab='Year',ylab='Total emissions (tons)')
 abline(lm(coal.years$V1~coal.years$year))
 dev.off()
